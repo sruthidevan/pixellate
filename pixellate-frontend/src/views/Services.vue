@@ -24,19 +24,26 @@
   </template>
   
   <script setup>
-  import { ref, onMounted } from 'vue';
-  import axios from 'axios';
+  import { ref } from 'vue';
   
-  const services = ref([]);
-  
-  onMounted(async () => {
-    try {
-      const response = await axios.get('http://localhost:8080/api/services'); // Ensure this matches your backend endpoint
-      services.value = response.data;
-    } catch (error) {
-      console.error('Failed to fetch services:', error);
-    }
-  });
+  const services = ref([
+    {
+      name: 'Custom Software Development',
+      description: 'We transform your unique ideas into functional, scalable applications tailored to your business needs.',
+    },
+    {
+      name: 'Backend Systems & APIs',
+      description: 'Crafting reliable and efficient systems that ensure seamless operations for your tech infrastructure.',
+    },
+    {
+      name: 'Cloud Integrations',
+      description: 'Integrate with leading cloud platforms like Azure and AWS to elevate your business capabilities.',
+    },
+    {
+      name: 'Consulting Services',
+      description: 'Providing expert advice and technical solutions to tackle your toughest tech challenges.',
+    },
+  ]);
   </script>
   
   <style scoped>
@@ -55,3 +62,4 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhance hover shadow */
   }
   </style>
+  
