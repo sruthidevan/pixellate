@@ -12,8 +12,8 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes,
+    history: createWebHistory('/pixellate/'), // Ensure the base URL matches your repository name
+    routes,
 });
 
 export default router;
