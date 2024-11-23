@@ -12,7 +12,7 @@ func main() {
 
 	// Configure CORS
 	corsConfig := cors.New(cors.Options{
-		AllowedOrigins:   []string{"http://localhost:5173"}, // Update with your frontend origin
+		AllowedOrigins:   []string{"http://localhost:5173", "https://sruthidevan.github.io"}, // Update with your frontend origin
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE"},
 		AllowedHeaders:   []string{"Content-Type"},
 		AllowCredentials: true,
