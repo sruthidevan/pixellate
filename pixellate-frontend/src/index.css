@@ -1,0 +1,99 @@
+/* src/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Global styles for html and body */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure html and body stretch to fill the viewport */
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
+}
+
+/* Root app container styling */
+#app {
+  display: flex;
+  flex-direction: column; /* Stack navbar, main content, and footer vertically */
+  min-height: 100vh; /* Ensure #app spans at least the full viewport height */
+}
+
+/* Footer specific styling */
+footer {
+  margin-top: auto; /* Push the footer to the bottom of the page */
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 4px solid #ffcc00;
+}
+
+/* Global body styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fdf8e4; /* Light yellow */
+  color: #222222; /* Neutral black for text */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
+nav {
+  background-color: #000000; /* Black navbar */
+  padding: 1rem 2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around; /* Evenly space the navigation links */
+}
+
+nav ul li a {
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav ul li a:hover {
+  color: #ffcc00; /* Highlight yellow on hover */
+}
+
+/* Button styles */
+button {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ffcc00, #ff9900);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff9900, #cc6600);
+  transform: scale(1.05); /* Slight enlargement on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Section background transitions */
+.hero, .main-content {
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #fdf8e4, #f8e1a4); /* Smooth gradient transition */
+}
+
+.main-content {
+  padding-bottom: 4rem; /* Ensure enough space for content */
+}
